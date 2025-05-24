@@ -1,7 +1,6 @@
-# Demo  
-![Demo paska na macOS](pasek_mac.gif) *(lub pełny URL, jeśli GIF jest hostowany online)*  
-
----
+-----
+(MacOS_Icons.gif)
+-----
 
 ## 🛠 Instalacja `userChrome.css` (Firefox)  
 
