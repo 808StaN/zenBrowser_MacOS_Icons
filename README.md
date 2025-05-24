@@ -1,1 +1,38 @@
-# zenBrowser_MacOS_Icons
+# Demo  
+![Demo paska na macOS](pasek_mac.gif) *(lub pełny URL, jeśli GIF jest hostowany online)*  
+
+---
+
+## 🛠 Instalacja `userChrome.css` (Firefox)  
+
+### 1. Włącz obsługę stylów użytkownika  
+- Otwórz Firefox i wpisz w pasku adresu:  
+  ```about:config```  
+- Wyszukaj:  
+  ```toolkit.legacyUserProfileCustomizations.stylesheets```  
+- Zmień wartość na **`true`** (kliknij dwukrotnie).  
+
+### 2. Znajdź folder profilu  
+- Wpisz w pasku adresu:  
+  ```about:support```  
+- W sekcji **"Plik folderu profilu"** kliknij przycisk **"Otwórz folder"**.  
+
+### 3. Stwórz wymagane pliki i foldery  
+- W folderze profilu utwórz folder o nazwie:  
+  ```chrome```  
+- Wewnątrz folderu `chrome` utwórz plik:  
+  ```userChrome.css```  
+- Wklej do niego swój kod CSS (np. style dotyczące `pasek_mac.gif`).  
+
+### 4. Zrestartuj Firefox  
+- Zamknij i ponownie uruchom przeglądarkę, aby zmiany zaczęły obowiązywać.  
+
+### 🔍 Gdzie znaleźć mój profil?  
+- **Windows:**  
+  ```C:\Users\[Twoja_Nazwa]\AppData\Roaming\Mozilla\Firefox\Profiles\[nazwa_profilu]```  
+- **macOS:**  
+  ```~/Library/Application Support/Firefox/Profiles/[nazwa_profilu]```  
+- **Linux:**  
+  ```~/.mozilla/firefox/[nazwa_profilu]```  
+
+> ⚠️ **Uwaga:** Jeśli folder `chrome` lub plik `userChrome.css` nie działają, upewnij się, że Firefox nie został zaktualizowany (czasami resetuje ustawienia).  
