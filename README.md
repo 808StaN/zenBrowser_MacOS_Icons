@@ -1,37 +1,34 @@
------
-![ZenBrowser macOS Icons Demo](https://github.com/808StaN/zenBrowser_MacOS_Icons/raw/main/MacOS_Icons.gif?raw=true)
------
+<div align="center">
+  <img src="https://github.com/808StaN/zenBrowser_MacOS_Icons/raw/main/MacOS_Icons.gif?raw=true" alt="ZenBrowser macOS Icons Demo">
+</div>
 
-## 🛠 Instalacja `userChrome.css` (Firefox)  
 
-### 1. Włącz obsługę stylów użytkownika  
-- Otwórz Firefox i wpisz w pasku adresu:  
+## 🛠 Installing `macOSicons.css`  
+
+### 1. Enable user styles support  
+- Open Firefox and type in the address bar:  
   ```about:config```  
-- Wyszukaj:  
+- Search for:  
   ```toolkit.legacyUserProfileCustomizations.stylesheets```  
-- Zmień wartość na **`true`** (kliknij dwukrotnie).  
+- Change the value to **`true`** (double-click).  
 
-### 2. Znajdź folder profilu  
-- Wpisz w pasku adresu:  
+### 2. Find your profile folder  
+- Type in the address bar:  
   ```about:support```  
-- W sekcji **"Plik folderu profilu"** kliknij przycisk **"Otwórz folder"**.  
+- In the **"Profile Folder"** section, click the **"Open Folder"** button.  
 
-### 3. Stwórz wymagane pliki i foldery  
-- W folderze profilu utwórz folder o nazwie:  
-  ```chrome```  
-- Wewnątrz folderu `chrome` utwórz plik:  
+### 3. Create required files and folders  
+- In your profile folder, create a new directory called:  
+  ```chrome```
+  - Copy the file to the `chrome` folder:  
+  ```macOSicons.css```    
+- Inside the `chrome` folder, create a file:  
   ```userChrome.css```  
-- Wklej do niego swój kod CSS (np. style dotyczące `pasek_mac.gif`).  
+- Add this import statement to the file:
+  ```@import url("macOSicons.css");```
+- (Alternatively, you can paste the entire content of:
+  ```macOSicons.css``` into:
+  ```userChrome.css```  
 
-### 4. Zrestartuj Firefox  
-- Zamknij i ponownie uruchom przeglądarkę, aby zmiany zaczęły obowiązywać.  
-
-### 🔍 Gdzie znaleźć mój profil?  
-- **Windows:**  
-  ```C:\Users\[Twoja_Nazwa]\AppData\Roaming\Mozilla\Firefox\Profiles\[nazwa_profilu]```  
-- **macOS:**  
-  ```~/Library/Application Support/Firefox/Profiles/[nazwa_profilu]```  
-- **Linux:**  
-  ```~/.mozilla/firefox/[nazwa_profilu]```  
-
-> ⚠️ **Uwaga:** Jeśli folder `chrome` lub plik `userChrome.css` nie działają, upewnij się, że Firefox nie został zaktualizowany (czasami resetuje ustawienia).  
+### 4. Restart ZenBrowser  
+- Close and reopen your browser for changes to take effect.  
