@@ -1,0 +1,99 @@
+/* Container style for the titlebar buttons */
+.titlebar-buttonbox-container {
+  background-color: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-inline-start: 10px !important;
+}
+
+/* General styles for each titlebar button */
+.titlebar-button {
+  appearance: none !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin-inline: 8px !important;
+  padding: 0 !important;
+  position: relative !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  color: transparent !important;
+  user-select: none !important;
+  transition: none !important;
+}
+
+/* Colors for the individual buttons */
+.titlebar-close {
+  background-color: #e9524a !important; /* Red for close */
+}
+
+.titlebar-min {
+  background-color: #f1ae1b !important; /* Yellow for minimize */
+}
+
+.titlebar-max,
+.titlebar-restore {
+  background-color: #59c837 !important; /* Green for maximize/restore */
+}
+
+/* Remove default icons from the buttons */
+.titlebar-button > .toolbarbutton-icon {
+  display: none !important;
+}
+
+/* Styles for hover icons */
+.titlebar-button:hover::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.50) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", sans-serif !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  pointer-events: none !important;
+  -webkit-font-smoothing: antialiased !important;
+  line-height: 0 !important;
+}
+
+/* Specific hover icons – larger and bolded */
+.titlebar-close:hover::after {
+  content: "×";
+  font-size: 14px !important; /* Enlarged from 12px */
+  font-weight: 700 !important; /* Bold */
+  margin-top: -0.5px;
+}
+
+.titlebar-min:hover::after {
+  content: "−"; /* Mathematical minus */
+  font-size: 15px !important; /* Enlarged from 13px */
+  font-weight: 700 !important; /* Bold */
+  margin-top: -1px;
+}
+
+/* Maximize/restore icon */
+.titlebar-max:hover::after,
+.titlebar-restore:hover::after {
+  content: "+";
+  font-size: 14px !important;
+  margin-top: 0px;
+}
+
+/* Click effect */
+.titlebar-button:active {
+  filter: brightness(0.92) !important;
+}
+
+/* Toggle visibility between maximize and restore */
+#titlebar-restore {
+  display: none !important;
+}
+
+:is([sizemode="maximized"]) #titlebar-max {
+  display: none !important;
+}
+
+:is([sizemode="maximized"]) #titlebar-restore {
+  display: inline-flex !important;
+}
