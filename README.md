@@ -1,5 +1,5 @@
 -----
-(MacOS_Icons.gif)
+(https://github.com/808StaN/zenBrowser_MacOS_Icons/blob/main/MacOS_Icons.gif)
 -----
 
 ## 🛠 Instalacja `userChrome.css` (Firefox)  
